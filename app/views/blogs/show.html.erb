@@ -9,6 +9,8 @@
   <% else %>
     <%= link_to 'お気に入りする', favorites_path(blog_id: @blog.id), method: :post, class: 'btn btn-primary' %>
   <% end %>
+
 <% end %>
+
 
 <%=link_to 'ブログ一覧画面にもどる',blogs_path, { :class => "btn btn-default" } %>
