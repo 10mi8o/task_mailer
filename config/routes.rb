@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
-  root to: 'blogs#index'
+  # root to: 'blogs#index'
+  root to: 'users#new'
+
+
+
   # root to: 'sessions#new'
 
   resources :sessions, only: [:new, :create, :destroy]
