@@ -93,10 +93,10 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'https://floating-reaches-39404.herokuapp.com' }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-  :user_name => Settings.gmail[:user_name],
-  :password => Settings.gmail[:password],
-  domain: "smtp.gmail.com",
-  address: "smtp.gmail.com",
+  user_name: ENV['app100577111@heroku.com'],
+  password: ENV['tdhkrt3q1051'],
+  domain: "heroku.com",
+  address: "smtp.SendGrid.net",
   port: 587,
   authentication: :plain,
   enable_starttls_auto: true
