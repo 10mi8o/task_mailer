@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  # add 以下Task_mailerの為、追記
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/inbox"
+  end
+
   get 'sessions/new'
 
   # root to: 'blogs#index'
@@ -21,5 +26,6 @@ Rails.application.routes.draw do
 
   def new
   end
+
 
 end
